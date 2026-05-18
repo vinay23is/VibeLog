@@ -33,7 +33,7 @@ export default async function HistoryPage() {
                 </div>
                 <div className="text-xs opacity-70">open</div>
               </div>
-              <div className="mt-2 opacity-85">
+              <div className="mt-2 opacity-80">
                 {(e.content ?? "").slice(0, 140)}{(e.content ?? "").length > 140 ? "…" : ""}
               </div>
             </a>

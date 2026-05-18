@@ -6,7 +6,7 @@ export async function POST(req: Request) {
 
   const { data: { user }, error: userErr } = await supabase.auth.getUser();
   if (userErr || !user) {
-    return NextResponse.redirect(new URL("/sign-in", req.url));
+    return NextResponse.redirect(new URL("/auth/login", req.url));
   }
 
   const form = await req.formData();
@@ -30,8 +30,7 @@ export async function POST(req: Request) {
   );
 
   if (error) {
-    // show the real error instead of "page isn't working"
-    return NextResponse.json({ error: error.message }, { status: 400 });
+    return NextResponse.redirect(new URL("/today?error=save_failed", req.url));
   }
 
   return NextResponse.redirect(new URL("/today", req.url));

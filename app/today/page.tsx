@@ -14,7 +14,7 @@ export default async function TodayPage() {
         <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
           <div className="text-2xl font-extrabold tracking-tight">VibeLog ✨</div>
           <div className="mt-2 opacity-80">Sign in to write your daily journal.</div>
-          <a className="mt-4 inline-block rounded-2xl bg-white px-4 py-3 font-semibold text-black" href="/sign-in">
+          <a className="mt-4 inline-block rounded-2xl bg-white px-4 py-3 font-semibold text-black" href="/auth/login">
             Sign in
           </a>
         </div>

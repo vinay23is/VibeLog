@@ -48,7 +48,9 @@ export default async function EntryPage({
           <div className="text-xl font-extrabold tracking-tight">
             {entry.entry_date} <span className="ml-2">{entry.mood ?? ""}</span>
           </div>
-          <div className="mt-1 text-xs opacity-70">Last updated</div>
+          <div className="mt-1 text-xs opacity-70">
+            Last updated: {entry.updated_at ? new Date(entry.updated_at).toLocaleString() : "—"}
+          </div>
 
           <pre className="mt-4 whitespace-pre-wrap leading-7 opacity-90">
             {entry.content}
